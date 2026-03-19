@@ -1,0 +1,199 @@
+{
+  "cookies": [
+    {
+      "name": "_gid",
+      "value": "GA1.2.1702620923.1771035129",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1771121537,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat_UA-109033876-1",
+      "value": "1",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1771035188,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "uid",
+      "value": "c792fbea-79aa-4227-b95b-b3b4f1332093",
+      "domain": ".criteo.com",
+      "path": "/",
+      "expires": 1804731129.017146,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "i",
+      "value": "5e983261-5f1e-4323-aca2-fe6539269fcf|1771035129",
+      "domain": ".openx.net",
+      "path": "/",
+      "expires": 1802571129.114395,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "cto_bundle",
+      "value": "gzRB_l9TQ0glMkZpU0FhNDFIakowbkxoYSUyQmJabFBKNHl5d0s0c0sxVjhSTXdiY1JWemhySGpOZHVkM05HU0xVV1NHODFYaDJoUlk2eGZuRXZGbGNYSWZWSjh2aGgzcVdMUXh4RWlRJTJGS0ZuQVI0JTJCc0Y0OUJNZ2pUOEJQTlZmM080VzBrSFRibDBFUkZxUnRTdmM3M25LcDlQV1p3USUzRCUzRA",
+      "domain": ".criteo.com",
+      "path": "/",
+      "expires": 1804731129.483223,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://demoqa.com",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "cto_bundle",
+      "value": "60OlBF9XUDZWd3YwRmVVZkVGcEZIekZhblBJWkthZGpuajZCZ1BYSzV1YXhSUk0lMkJQRW9DekQzTFRPOG1xR05hOXNBcFlEZjQlMkIlMkYycjI1bTRhVG1YWmw4S1N3WENyNXU3c3ZVRzdmWXZFS0I4UkNjM1NaSnhGSiUyRmtySjFaWSUyRm1jWG9waUgzMzBDODJHQjNkQ3hkQUgxbk1yejFBJTNEJTNE",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1804731129,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__eoi",
+      "value": "ID=89612781f49646f5:T=1771035128:RT=1771035128:S=AA-Afjb6wkpxuReD3-tyk3UDq_5F",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1786587128,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InRlc3RVc2VyIiwicGFzc3dvcmQiOiJUZXN0MTIzISIsImlhdCI6MTc3MTAzNTEzMn0._dk45eZe8fJo1-aZVEoPR_PDWIi-Ac2ypMKkW3WxO7g",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "expires",
+      "value": "2026-02-21T02%3A12%3A12.178Z",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "userID",
+      "value": "397847e9-82a2-4521-a0c2-8db57b2d983b",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "userName",
+      "value": "testuser",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_MVRXK93D28",
+      "value": "GS2.1.s1771035134$o1$g0$t1771035134$j60$l0$h0",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1805595134.649761,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.2.1231139339.1771035129",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1805595137.102944,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://demoqa.com",
+      "localStorage": [
+        {
+          "name": "google_auto_fc_cmp_setting",
+          "value": "[1]"
+        },
+        {
+          "name": "totalCalls",
+          "value": "0"
+        },
+        {
+          "name": "_GESPSK-crwdcntrl.net",
+          "value": "[\"crwdcntrl.net\",null,1771035128203,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "totalCallsTimeout",
+          "value": "0"
+        },
+        {
+          "name": "lastSuccessfullAd",
+          "value": "0"
+        },
+        {
+          "name": "_GESPSK-euid.eu",
+          "value": "[\"euid.eu\",null,1771035128204,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "_GESPSK-uidapi.com",
+          "value": "[\"uidapi.com\",null,1771035128205,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "cto_bundle",
+          "value": "60OlBF9XUDZWd3YwRmVVZkVGcEZIekZhblBJWkthZGpuajZCZ1BYSzV1YXhSUk0lMkJQRW9DekQzTFRPOG1xR05hOXNBcFlEZjQlMkIlMkYycjI1bTRhVG1YWmw4S1N3WENyNXU3c3ZVRzdmWXZFS0I4UkNjM1NaSnhGSiUyRmtySjFaWSUyRm1jWG9waUgzMzBDODJHQjNkQ3hkQUgxbk1yejFBJTNEJTNE"
+        },
+        {
+          "name": "_GESPSK-pubcid.org",
+          "value": "[\"pubcid.org\",null,1771035128206,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "_GESPSK-openx",
+          "value": "[\"openx\",\"eyJpIjoiWHBneVlWOGVReU9zb3Y1bE9TYWZ6dz09In0=\",1771035130458,null,null,null,null,null,0]"
+        },
+        {
+          "name": "_GESPSK-id5-sync.com",
+          "value": "[\"id5-sync.com\",null,1771035128993,null,null,null,null,null,0,[106]]"
+        },
+        {
+          "name": "_GESPSK-esp.criteo.com",
+          "value": "[\"esp.criteo.com\",null,1771035128205,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "__VASTUtil__",
+          "value": "__VASTUtil__"
+        },
+        {
+          "name": "_GESPSK-rtbhouse",
+          "value": "[\"rtbhouse\",null,1771035128710,null,null,null,null,null,0,[106]]"
+        }
+      ]
+    }
+  ]
+}

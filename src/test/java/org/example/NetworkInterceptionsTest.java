@@ -14,24 +14,32 @@ public class NetworkInterceptionsTest extends BaseTest{
     @Test
     void mockBooksApi(){
         // mocking resp
+        /**
+         page.route() - Метод, который умеет перехватывать запросы к серверу (от страницы?)
+         две звездочки - ** - означает любой урл, соответствующий такой маске.
+         **/
+
         page.route("**/BookStore/v1/Books", route -> {
             String mockResponse = """
+            {
+                "books": [
                     {
-                        "books": [
-                                {
-                                    "isbn": "test-isbn-123",
-                                    "title": "Playwrighgt для QA",
-                                    "subtitle": "Тестирование с удовольствием",
-                                    "author": "Иван Тестировщиков",
-                                    "publisher_date": "2023-07-16T0:48:39.000Z",
-                                    "publisher": "Тест-Издат",
-                                    "pages": "333",
-                                    "description": "Лучшая книга по тестированию с Playwright",
-                                    "website": "https://example.com",
-                                }
-                            ]
+                        "isbn": "9781449325862",
+                        "title": "Git Для чайников",
+                        "subTitle": "Гит для полных долбоебов",
+                        "author": "Ктобы Подумал",
+                        "publish_date": "2020-06-04T08:48:39.000Z",
+                        "publisher": "O'Reilly Media",
+                        "pages": 234,
+                        "description": "This pocket guide is the perfect on-the-job companion to Git и бла бла бла",
+                        "website": "https://labs.com/books/1230000000561/index.html"
                     }
-                    """;
+                ]
+            }
+            """;
+
+
+            /// route.fulfill() - возвращает наш вариант ответа от сервера, как будто-бы сервер так ответил.
             route.fulfill(new Route.FulfillOptions()
                     .setStatus(200)
                     .setContentType("application/json")
@@ -47,11 +55,11 @@ public class NetworkInterceptionsTest extends BaseTest{
         page.waitForTimeout(2000);
 
         // waiting displaying data table
-        Locator bookRow = page.locator(".rt-tbody .rt-tr-group").first();
+        Locator bookRow = page.locator("tbody > tr").first();
         bookRow.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(1000));
 
         //assert
-        Locator bookTitle = bookRow.locator(".rt-td:nth-child(2)");
-        assertEquals("Playwrighgt для QA", bookTitle.textContent().trim());
+        Locator bookTitle = bookRow.locator(".mr-2 a");
+        assertEquals("Git Для чайников", bookTitle.textContent().trim());
     }
 }

@@ -1,37 +1,39 @@
 name: Java tests
-on: [ push ] # на какой триггер будет срабатывать пайплайн - на каждый пуш
+
+on: [push] # на какой триггер будет срабатывать пайплайн - на каждый пуш
+
 jobs:
   run-common-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4 # клоннируем репо
-          
-          #install Java 17
-          - name: Set up Java 17
-            uses: actions/setup-java@v3
-            with:
-              distribution: temurin
-              java-version: "17"
+      - uses: actions/checkout@v4 # клонируем репо
+      
+      #install Java 17
+      - name: Set up Java 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: "17"
 
-          # cashing maven dependencies
-          - name: Cache Maven Dependencies
-            uses: actions/cache@v3
-            with:
-              path: ~/.m2/repository
-              key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-              restore-keys: |
-                ${{ runner.os }}-maven-
+      # cashing maven dependencies
+      - name: Cache Maven Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
 
-          # setup system dep
-          - name: Install system dependencies
-            run: |
-              sudo apt-get update
-              sudo apt-get install -y xvfb libgbm-dev x11-xkb-utils
+      # setup system dep
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb libgbm-dev x11-xkb-utils
 
-          # run with wirt display
-          - name: Run tests
-            run: |
-              export DISPLAY=:0
-              Xvfb :0 -screen 0 1280x780x24 >/dev/nul 2>&1 &
-              mvn clean test # -B -Dtest=!DynamicLoadingApiTest
+      # run with wirt display
+      - name: Run tests
+        run: |
+          export DISPLAY=:0
+          Xvfb :0 -screen 0 1280x780x24 >/dev/nul 2>&1 &
+          mvn clean test # -B -Dtest=!DynamicLoadingApiTest

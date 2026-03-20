@@ -36,4 +36,4 @@ jobs:
         run: |
           export DISPLAY=:0
           Xvfb :0 -screen 0 1280x780x24 >/dev/nul 2>&1 &
-          mvn clean test # -B -Dtest=!DynamicLoadingApiTest
+          mvn clean test -B -Dtest=DynamicLoadingApiTest

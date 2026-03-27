@@ -5,11 +5,12 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Route;
 import com.microsoft.playwright.options.WaitForSelectorState;
 import com.microsoft.playwright.options.WaitUntilState;
+import org.example.base.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NetworkInterceptionsTest extends BaseTest{
+public class NetworkInterceptionsTest extends BaseTest {
 
     @Test
     void mockBooksApi(){

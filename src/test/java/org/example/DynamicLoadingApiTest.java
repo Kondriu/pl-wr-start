@@ -3,6 +3,7 @@ package org.example;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Tracing;
 import com.microsoft.playwright.options.WaitForSelectorState;
+import org.example.base.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Paths;

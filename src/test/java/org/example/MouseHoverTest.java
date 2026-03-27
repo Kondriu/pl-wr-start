@@ -3,6 +3,7 @@ package org.example;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.KeyboardModifier;
+import org.example.base.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

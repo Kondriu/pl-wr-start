@@ -3,6 +3,7 @@ package org.example;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.LocatorAssertions;
+import org.example.base.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
@@ -59,6 +60,7 @@ public class WaitersTest extends BaseTest {
         assertThat(checkoutButton).isEnabled(new LocatorAssertions.IsEnabledOptions().setTimeout(3000));
 
         assertThat(checkoutButton).hasAttribute("data-status", "active", new LocatorAssertions.HasAttributeOptions().setTimeout(3000));
+
 
     }
 }

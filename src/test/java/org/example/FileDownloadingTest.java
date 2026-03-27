@@ -1,6 +1,7 @@
 package org.example;
 
 import com.microsoft.playwright.Download;
+import org.example.base.BaseTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

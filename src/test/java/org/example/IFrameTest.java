@@ -2,6 +2,7 @@ package org.example;
 
 import com.microsoft.playwright.FrameLocator;
 import com.microsoft.playwright.Locator;
+import org.example.base.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Paths;

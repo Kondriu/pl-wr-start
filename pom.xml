@@ -12,8 +12,11 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <junit.version>5.13.4</junit.version>
+    <junit.version>5.11.4</junit.version>
     <playwright.version>1.58.0</playwright.version>
+    <aspectj.version>1.9.22</aspectj.version>
+    <allure-junit5.version>2.26.0</allure-junit5.version>
+    <allure-maven.version>2.15.2</allure-maven.version>
   </properties>
 
   <dependencies>
@@ -50,9 +53,48 @@
     </dependency>
 
 
+    <!-- Source: https://mvnrepository.com/artifact/io.qameta.allure/allure-junit5 -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-junit5</artifactId>
+      <version>${allure-junit5.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Source: https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.3.0</version>
+          <configuration>
+            <useSystemClassLoader>false</useSystemClassLoader>
+            <redirectTestOutputToFile>true</redirectTestOutputToFile>
+            <argLine>
+              -Dfile.encoding=UTF-8
+              -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+            </argLine>
+            <includes>
+              **/*Test.java
+            </includes>
+          </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -60,6 +102,11 @@
           <source>17</source>
           <target>17</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-maven</artifactId>
+        <version>${allure-maven.version}</version>
       </plugin>
     </plugins>
   </build>
